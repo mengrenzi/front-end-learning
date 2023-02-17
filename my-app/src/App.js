@@ -54,23 +54,36 @@ function App() {
     <div className="container">
       <div className="header">
         <img className="bigImg" src={preview} />
+        <div className="topLeft">
+          <div className="circle" />
+          live
+        </div>
       </div>
-      <div className="eventList">
-        {events.map((event) => {
-          return (
-            <div className="event">
-              <div className="firstColumn">
-                <img className="smallImg" src={event.image} />
-                <div className="nameColumn">
-                  <div>{event.title}</div>
-                  <div>{event.subtitle}</div>
+      <div className="whiteBackground">
+        <div className="inputContainer">
+          <input class="input" type="text" placeholder="Search Events" />
+        </div>
+        <div className="eventList">
+          {events.map((event) => {
+            return (
+              <div className="event">
+                <div className="imgColumn">
+                  <img className="smallImg" src={event.image} />
+                </div>
+                <div className="secondColumn">
+                  <div className="nameColumn">
+                    <div className="title">{event.title}</div>
+                    <div className="subTitle">{event.subtitle}</div>
+                  </div>
+                  <div className="locationColumn">
+                    {event.site + ' - ' + event.detail}
+                  </div>
+                  <div className="timeColumn">{getTime(event.timestamp)}</div>
                 </div>
               </div>
-              <div>{event.site + ' - ' + event.detail}</div>
-              <div>{getTime(event.timestamp)}</div>
-            </div>
-          );
-        })}
+            );
+          })}
+        </div>
       </div>
       <div></div>
     </div>
