@@ -53,24 +53,25 @@ function App() {
   return (
     <div className="container">
       <div className="header">
-        <img src={preview} />
+        <img className="bigImg" src={preview} />
       </div>
-      {events.map((event) => {
-        return (
-          <div className="event">
-            <div className="firstColumn">
-              <img className="smallImg" src={event.image} />
-              <div className="nameColumn">
-                <div>{event.title}</div>
-                <div>{event.subtitle}</div>
+      <div className="eventList">
+        {events.map((event) => {
+          return (
+            <div className="event">
+              <div className="firstColumn">
+                <img className="smallImg" src={event.image} />
+                <div className="nameColumn">
+                  <div>{event.title}</div>
+                  <div>{event.subtitle}</div>
+                </div>
               </div>
+              <div>{event.site + ' - ' + event.detail}</div>
+              <div>{getTime(event.timestamp)}</div>
             </div>
-            <div>{event.site}</div>
-            <div>{event.detail}</div>
-            <div>{getTime(event.timestamp)}</div>
-          </div>
-        );
-      })}
+          );
+        })}
+      </div>
       <div></div>
     </div>
   );
