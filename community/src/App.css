@@ -1,0 +1,74 @@
+button {
+  background-color: white;
+  padding: 8px 12px;
+  color: white;
+  gap: 4px;
+  border: 1px solid #6074DD;
+  border-radius: 25px;
+  display: flex;
+  height: 40px;
+  justify-content: center;
+  align-items: center;
+}
+
+.button_text {
+  color: rgb(96, 116, 221);
+  margin: 0px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.App-header {
+  background-color: rgba(122, 132, 183, 1);
+  padding: 0px 11.1%;
+  height: 55px;
+  display: flex;
+  align-items: center;
+}
+
+.card_margin {
+  margin-left: 32px;
+  margin-right: 32px;
+}
+
+.card_container {
+  display: flex; 
+  justify-content: center;
+  align-items: center;
+  max-width: 1000px;
+  max-height: 500px;
+  margin: 100px auto;
+  background: #969696;
+  border-radius: 25px;
+}
+
+.protocol_card {
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.App-logo {
+  flex: 1 1 0%;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.card_title {
+  margin-left: 32px; font-family: Rubik; color: white; font-weight: 700; font-size: 32px; line-height: 40px;
+}
